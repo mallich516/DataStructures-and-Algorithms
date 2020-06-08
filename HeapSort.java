@@ -4,10 +4,12 @@ public class HeapSort {
 	
 		int[] arr = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
 
+		System.out.println("UnSorted Array");
 		show(arr);
 
 		heapSort(arr);		
 
+		System.out.println("Sorted Array");
 		show(arr);		
 
 	}
