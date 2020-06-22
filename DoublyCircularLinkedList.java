@@ -1,4 +1,4 @@
-public class CircularLinkedList {
+public class DoublyCircularLinkedList {
     
     class Node {
         
@@ -72,7 +72,7 @@ public class CircularLinkedList {
 
     public static void main(String args[]) {
 
-        CircularLinkedList list = new CircularLinkedList();
+        DoublyCircularLinkedList list = new DoublyCircularLinkedList();
 
         list.insert(1);
         list.insert(2);
