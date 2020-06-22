@@ -29,6 +29,10 @@ class Stack {
     }
 
     public int peek() {
+        if(top < 0) {
+            System.out.println("Stack is Empty!");
+            return 0;
+        } 
         return arr[top];
     }
 
@@ -60,9 +64,10 @@ class Stack {
 
         Stack stack = new Stack();
 
-        System.out.println(stack.isEmpty());
-        System.out.println(stack.isFull());
-        System.out.println(stack.size());
+        System.out.println("IsEmtpy : " + stack.isEmpty());
+        System.out.println("IsFull : " + stack.isFull());
+        System.out.println("Size of Stack : " + stack.size());
+        System.out.println("Peek : " + stack.peek());
         stack.show();
 
         stack.push(1);
@@ -71,26 +76,29 @@ class Stack {
         stack.push(4);
         stack.push(5);
 
-        System.out.println(stack.isEmpty());
-        System.out.println(stack.isFull());
-        System.out.println(stack.size());
+        System.out.println("IsEmtpy : " + stack.isEmpty());
+        System.out.println("IsFull : " + stack.isFull());
+        System.out.println("Size of Stack : " + stack.size());
+        System.out.println("Peek : " + stack.peek());
 
         stack.show();
 
         stack.pop();
 
-        System.out.println(stack.isEmpty());
-        System.out.println(stack.isFull());
-        System.out.println(stack.size());
+        System.out.println("IsEmtpy : " + stack.isEmpty());
+        System.out.println("IsFull : " + stack.isFull());
+        System.out.println("Size of Stack : " + stack.size());
+        System.out.println("Peek : " + stack.peek());
 
         stack.show();
 
         stack.pop();
         stack.pop();
 
-        System.out.println(stack.isEmpty());
-        System.out.println(stack.isFull());
-        System.out.println(stack.size());
+        System.out.println("IsEmtpy : " + stack.isEmpty());
+        System.out.println("IsFull : " + stack.isFull());
+        System.out.println("Size of Stack : " + stack.size());
+        System.out.println("Peek : " + stack.peek());
         stack.show();
 
  
