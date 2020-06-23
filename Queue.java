@@ -22,11 +22,19 @@ public class Queue {
         if(size <= 0) {
             System.out.println("Queue is Empty");
         } else {
-            arr[rear] = 0;
+            arr[front] = 0;
+            for(int i = 1; i < size; i++) {
+                arr[i - 1] = arr[i];
+                arr[i] = 0;
+            }
             rear--;
             size--;
         }
 
+    }
+
+    public int peek() {
+        return arr[front];
     }
 
     public int size() {
@@ -58,6 +66,7 @@ public class Queue {
         queue.enqueue(4);
         queue.enqueue(5);
 
+        System.out.println("Peek : " + queue.peek());
         System.out.println("Size : " + queue.size());
         System.out.println("IsEmpty : " + queue.isEmpty());
         System.out.println("IsFull : " + queue.isFull());
@@ -65,6 +74,7 @@ public class Queue {
 
         queue.dequeue();
 
+        System.out.println("Peek : " + queue.peek());
         System.out.println("Size : " + queue.size());
         System.out.println("IsEmpty : " + queue.isEmpty());
         System.out.println("IsFull : " + queue.isFull());
@@ -73,7 +83,7 @@ public class Queue {
         queue.dequeue();
         queue.dequeue();
 
-
+        System.out.println("Peek : " + queue.peek());
         System.out.println("Size : " + queue.size());
         System.out.println("IsEmpty : " + queue.isEmpty());
         System.out.println("IsFull : " + queue.isFull());
